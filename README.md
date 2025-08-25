@@ -1,5 +1,5 @@
 # 🚗 Blender Car Damage Masking
-
+Synthetic Data Generation Using Blender and python. Read # Documentation File before going into it
 This project demonstrates how to add **realistic car damage** (dents, scratches, dirt, and cracks) in **Blender** using assets, procedural textures, and a Python script.
 
 ---
