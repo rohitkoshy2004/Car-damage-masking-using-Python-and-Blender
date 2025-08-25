@@ -1,102 +1,129 @@
-# Car-damage-masking-using-Python-and-Blender
-Synthetic Data Generation Using Blender and python. 
+# 🚗 Blender Car Damage Masking
 
-#Table of Contents
-Introduction
-Prerequisites
-Importing the Car Model
-Importing Assets and Applying Them to the Car Model
-Running the Python Script
-Changing the Mode Switcher Node
-Creating Damages
-Applying Dirt Texture
-Applying the HDRI Dome
-Generation
-Unresolved Challenges
-Specific Problems
-Resources
+This project demonstrates how to add **realistic car damage** (dents, scratches, dirt, and cracks) in **Blender** using assets, procedural textures, and a Python script.
 
-1. Introduction
-This documentation will walk you through the process of adding realistic damage, like dents and scratches, to a car model using Blender. 
-In this project, we'll use a Blender script to create these damage masks and then render the results, saving them neatly into a folder on your PC.
-2. Prerequisites
-Blender Installed: Blender version 4.1 or above.
-Car Model File:  Any car models.You can import it from online
-Render Engine: This project uses Cycles as the render engine.
-Assets: Assets can browsed through asset browser
-	
+---
 
-3. Importing the Car Model
-You have two options to import your car model:
-Option 1: Import from File
-Open Blender.
-Go to File > Import and select the format of your car model.
-Navigate to the car model file and import it into Blender.
-Option 2: Using BlenderKit Addon
-Download the BlenderKit addon: BlenderKit. A zip file is also included in the folder provided.
-Open Blender.
-Go to Edit > Preferences (or press Ctrl + ,) and navigate to the Add-ons section.
-Enable the BlenderKit addon.
-Use the search option in the BlenderKit interface to find and import the car model you want by typing "Car" in the search bar.
-Click on the car model to import it into your scene.
+## 📌 Table of Contents
+- [Introduction](#introduction)
+- [Prerequisites](#prerequisites)
+- [Importing the Car Model](#importing-the-car-model)
+- [Importing Assets](#importing-assets)
+- [Running the Python Script](#running-the-python-script)
+- [Changing the Mode Switcher Node](#changing-the-mode-switcher-node)
+- [Creating Damages](#creating-damages)
+- [Applying Dirt Texture](#applying-dirt-texture)
+- [Applying the HDRI Dome](#applying-the-hdri-dome)
+- [Generation](#generation)
+- [Unresolved Challenges](#unresolved-challenges)
+- [Specific Problems](#specific-problems)
+- [Resources](#resources)
 
-4. Importing Assets and Applying Them to the Car Model
-Open the Asset Browser in Blender.
+---
 
-Drag and drop the desired asset onto the car model where you want the damage texture to be applied.
-5. Running the Python Script
-After applying the assets, switch to the Scripting workspace.
-Python script in the following link:Python Script.
-6. Changing the Mode Switcher Node
-After running the Python script, go to the Shading tab.
+## 📖 Introduction
+This guide walks you through the process of **adding damage masks** (dents, scratches, cracks, dirt) to a car model in Blender.  
+The workflow uses:
+- Blender shaders & assets  
+- A custom **Python script**  
+- Rendering with **Cycles Engine**
 
-Open the Shader Editor.
-Locate the Mode Switcher node in your shader editor.
-Add a new Mode Switcher node if it doesn’t appear automatically or change the Mode Switcher to the latest “mode switcher”.
-7. Creating Damages
-Dents
-Adjust the Voronoi Texture and Mapping node scales to create suitable dents on your car model.
+---
 
+## ⚙️ Prerequisites
+- Blender **4.1+** installed  
+- Car model file (download or import from BlenderKit)  
+- Render engine: **Cycles**  
+- Assets available via **Blender Asset Browser**  
 
-Scratches
-Modify the values and Mapping node scales to generate appropriate scratches.
+---
 
-Glass Cracks
-Add and configure the nodes to simulate realistic glass cracks.
+## 🚙 Importing the Car Model
+You have two options:
 
+### **Option 1: Import from File**
+1. Open Blender  
+2. Go to `File > Import` and select your car model format  
+3. Import it into Blender  
 
-8. Applying dirt texture
-To add dirt texture, follow this tutorial Simple Dirt & Dust in Blender - NOT in Substance
+### **Option 2: Using BlenderKit Addon**
+1. Download and install the **BlenderKit addon**  
+2. Enable it in `Edit > Preferences > Add-ons`  
+3. Search for **"Car"** in BlenderKit  
+4. Click to import into your scene  
 
+---
 
-9. Applying the HDRI Dome
-Instead of importing an HDRI image directly to the world texture,we are using dome hdri.Perks of using dome hdri is it helps in making the car stay on ground unlike world hdri. Follow this tutorial to create the HDRI dome: HDRI Dome Tutorial (Relevant Timeline: 6:03 - 17:38).
-You can switch HDRIs by clicking the file icon in the node setup and selecting a different HDRI.
+## 🎨 Importing Assets
+1. Open the **Asset Browser**  
+2. Drag & drop desired assets (scratches, dents, textures) onto the car model  
 
-10. Generation
-Once you’ve configured everything:
-Select the number of samples you want to generate.
-Click on Generate to start rendering your car model.
+---
 
-11. Unresolved Challenges
-While this guide provides a solid foundation, some challenges remain:
-Needs better procedural Dents and scratch texture 
-Needs proper lightning to match the background of the car
-Dent randomizing on one side
-Needs better realism light reflection on car material
+## 🐍 Running the Python Script
+1. Switch to the **Scripting workspace**  
+2. Run the provided Python script (link in resources)  
 
-Dents need to be implemented manually.
-12. Specific Problems that needs to be Addressed 
-Needs proper detailing in the hdri environment.
-Needs better understanding of geometry nodes for better detailed dents.
-No proper placement of dents.
+---
 
+## 🔄 Changing the Mode Switcher Node
+1. Open the **Shading tab > Shader Editor**  
+2. Locate the **Mode Switcher node**  
+3. Replace it with the latest version if missing  
 
-13. Resources
-Texture resource: Texture resource
-Car models : 	
-https://drive.google.com/drive/folders/1pdVvE4Iy5UDwf-opVEpgLbMOX85w-kB3?usp=drive_link
-https://sketchfab.com/categories/cars-vehicles
-https://free3d.com/3d-models/vehicles
-https://www.turbosquid.com/3d-model/free/car
+---
 
+## 🛠️ Creating Damages
+- **Dents** → Adjust `Voronoi Texture` + `Mapping` node scales  
+- **Scratches** → Modify values in mapping nodes  
+- **Glass Cracks** → Add crack texture nodes  
+
+---
+
+## 🌫 Applying Dirt Texture
+Follow this tutorial:  
+[Simple Dirt & Dust in Blender](https://www.youtube.com/watch?v=example) *(replace with your actual link)*
+
+---
+
+## 🌎 Applying the HDRI Dome
+- Use a **dome HDRI** instead of world HDRI  
+- Benefits: Keeps car aligned with ground plane  
+- Tutorial: [HDRI Dome Tutorial](https://www.youtube.com/watch?v=example&t=363) *(6:03 - 17:38)*  
+
+---
+
+## 🖼️ Generation
+1. Set the number of samples  
+2. Click **Generate** to render and save  
+
+---
+
+## ⚠️ Unresolved Challenges
+- Needs **better procedural dents & scratches**  
+- Lighting doesn’t always match background  
+- Dents only randomize on one side  
+- Car reflections need improvement  
+
+---
+
+## 🐞 Specific Problems
+- HDRI environment lacks detailing  
+- Geometry nodes need refinement  
+- Poor placement of dents  
+
+---
+
+## 📚 Resources
+- **Texture resource:** [Click Here](#)  
+- **Car Models:**  
+  - [Google Drive Collection](https://drive.google.com/drive/folders/1pdVvE4Iy5UDwf-opVEpgLbMOX85w-kB3?usp=drive_link)  
+  - [Sketchfab](https://sketchfab.com/categories/cars-vehicles)  
+  - [Free3D](https://free3d.com/3d-models/vehicles)  
+  - [TurboSquid](https://www.turbosquid.com/3d-model/free/car)  
+
+---
+
+## 🏁 Conclusion
+This project serves as a **foundation for procedural car damage simulation** in Blender.  
+Future improvements include better node setups, more realistic materials, and enhanced geometry-based denting.  
