@@ -82,7 +82,7 @@ You have two options:
 
 ## 🌫 Applying Dirt Texture
 Follow this tutorial:  
-[Simple Dirt & Dust in Blender](https://www.youtube.com/watch?v=example) *(replace with your actual link)*
+[Simple Dirt & Dust in Blender](https://www.youtube.com/watch?v=example) 
 
 ---
 
